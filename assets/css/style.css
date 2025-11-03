@@ -1,0 +1,268 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+/* Corpo da página */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #1a1a1a;
+  color: #fff;
+}
+
+/* Cabeçalho */
+header {
+  background-color: #DBB889;
+  padding: 20px 40px;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* Agrupamento da logo e menu */
+.logo-menu {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+/* Logo */
+.logo {
+  height: 100px;
+  width: auto;
+}
+
+/* Menu */
+.menu ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.menu a:hover {
+  color: #000;
+}
+
+/* Ícones sociais + botão agendar */
+.social-icons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.social-icons img {
+  width: 28px;
+  height: 28px;
+  transition: transform 0.3s ease;
+}
+
+.social-icons a:hover img {
+  transform: scale(1.2) rotate(8deg);
+}
+
+/* Botão de agendamento */
+.botao-agendar {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #000;
+  color: #E7E7E7;
+  font-size: 1.1em;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  align-self: center;
+}
+
+.botao-agendar:hover {
+  background-color: #c9a76e;
+  transform: scale(1.05);
+}
+
+/* Seções */
+.section {
+  padding: 80px 40px;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.section h1,
+.section h2 {
+  font-size: 3em;
+  margin-bottom: 20px;
+  color: #DBB889;
+  text-align: left;
+}
+
+.section p {
+  font-size: 1.3em;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+/* Contato com ícones em linha e animação */
+.contato .redes-sociais {
+  margin-top: 30px;
+  display: flex;
+  justify-content: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.contato .redes-sociais a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #f0c040;
+  font-size: 1.2em;
+  text-decoration: none;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.contato .redes-sociais a:hover {
+  color: #fff;
+  transform: scale(1.05);
+}
+
+.contato .redes-sociais img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease;
+}
+
+.contato .redes-sociais a:hover img {
+  transform: rotate(10deg) scale(1.2);
+}
+
+/* Layout da seção Início com imagem à esquerda */
+.inicio-container {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.inicio-texto {
+  flex: 1 1 400px;
+}
+
+.inicio-imagens {
+  flex: 1 1 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inicio-imagens img {
+  width: 50%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+  object-fit: cover;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.inicio-imagens img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+}
+
+/* Seção Clube */
+.clube-container {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.clube-texto {
+  flex: 1 1 400px;
+}
+
+.clube-imagem {
+  flex: 1 1 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.clube-imagem img {
+  width: 50%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+  object-fit: cover;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.clube-imagem img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+}
+
+/* Responsivo para telas menores */
+@media (max-width: 768px) {
+  .inicio-container,
+  .clube-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .inicio-imagens img,
+  .clube-imagem img {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .social-icons {
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+  }
+}
+
+/* Rodapé */
+footer {
+  border-top: 2px solid #DBB889;
+  padding: 20px 40px;
+  text-align: center;
+  background-color: #1a1a1a;
+}
+
+.footer-content p {
+  color: #fff;
+  font-size: 1em;
+}
+
+.footer-content a {
+  color: #DBB889;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.footer-content a:hover {
+  color: #fff;
+}
