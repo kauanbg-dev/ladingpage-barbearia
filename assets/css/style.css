@@ -90,7 +90,7 @@ header {
 }
 
 .botao-agendar:hover {
-  background-color: #c9a76e;
+  background-color: #333;
   transform: scale(1.05);
 }
 
